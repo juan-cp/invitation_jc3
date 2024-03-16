@@ -1,0 +1,438 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+      max-width: 100%;
+  overflow-x: hidden;
+}
+
+ .swiper-container {
+            width: 100%;
+            margin: auto;
+            position: relative; /* Necesario para posicionar los botones */
+        }
+        .swiper-slide {
+            width: calc(100% / 6); /* Ancho de cada slide */
+        }
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Ancho de los botones */
+    height: 30px; /* Alto de los botones */
+    background-color: rgba(169, 169, 169, 0.5); /* Fondo gris translúcido */
+    border-radius: 5px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: ''; /* Crea un pseudo-elemento para la flecha */
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.swiper-button-next::after {
+    border-width: 8px 0 8px 12px; /* Flecha apuntando a la derecha */
+    border-color: transparent transparent transparent #333; /* Color gris oscuro */
+    right: 10 px;
+}
+
+.swiper-button-prev::after {
+    border-width: 8px 12px 8px 0; /* Flecha apuntando a la izquierda */
+    border-color: transparent #333 transparent transparent; /* Color gris oscuro */
+    left: 10px;
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    color: transparent;
+    background: none;
+}
+
+.background2 {
+    background-image: url('anillos borroso.png');
+    background-size: cover;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    height: 120vh;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0;
+}
+
+.parallax-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+.parallax-image {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translate3d(0, 0, 0);
+        }
+
+.background {
+    background-image: url('blanco y negro.png');
+    background-size: cover;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: white; /* Adjust text color */
+    padding: 100px 0; /* Adjust padding as needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content h1 {
+            font-size: 3em;
+        }
+
+.date {
+    font-family: "Bellota Text", sans-serif;
+    font-size: 40px;
+    color: black;
+}
+.hora {
+    font-family: 'Bellota Text', sans-serif; 
+    font-size: 40px; 
+    font-weight: bold;
+    color: black;
+}
+
+.names {
+    font-family: 'Alex Brush'; /*, cursive*/
+    font-size: 80px; /* Adjusted size for responsiveness */
+    font-weight: normal;
+}
+
+ .quote {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px; /* Adjust font size */
+        }
+
+.correa-fotos {
+    overflow: hidden;
+    width: 100%;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    animation: desplazamiento 10s linear infinite;
+    width: fit-content;
+}
+
+li {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+img:hover {
+    opacity: 0.7;
+}
+
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-content {
+  display: flex;
+}
+
+.carousel-btn {
+  position: fixed;
+  top: 50%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+#prevBtn,
+#nextBtn {
+  opacity: 0.5;
+  visibility: hidden;
+  z-index: 2;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+  opacity: 1;
+}
+
+
+.countdown {
+    margin-top: 32px;
+    font-size: 10vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+}
+
+#countdown span { 
+    font-weight: normal !important;
+    font-family: "Raleway Dots", sans-serif !important; 
+    font-size: 45px; 
+    color: gray; /* Adjusted size for responsiveness */
+}
+
+#countdown div {
+    margin: 0 10px;
+    font-family: "Bellota Text", sans-serif; 
+    font-size: 20px; 
+    color: black; 
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+      font-size: 5vw; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+  }
+.subtitulo {
+    font-family: "Bellota Text", sans-serif !important; font-size: 20px !important; color: black !important; font-weight: 600 !important;
+}
+
+.white-background {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    color: #54595F;
+}
+
+.white-background .inner-div {
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box {
+    font-family: "Raleway", serif;
+    font-size: 20px;
+    text-align: center;
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 400px; /* Added maximum width for responsiveness */
+    height: 150px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px; /* Added margin bottom for separation */
+}
+
+.box1 {
+    font-family: "Raleway", serif;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+    width: 200%; /* Adjusted width for responsiveness */
+    height: 600px;
+    background-color: rgba(80, 40, 10, 0.3); /* Relleno blanco con opacidad 0.7 */;
+    color: white;
+    border: 2px  black;
+    border-radius: 0px;
+    padding: 20px;
+    margin-bottom: 20px; /* Added margin bottom for separation */
+}
+.form-container {
+    width: 100%;
+    text-align: center;
+    font-family: "Raleway", serif;
+    font-weight: 100;
+    color: white;
+    margin: 0 auto;
+    background-color: #747676; /* Color gris de fondo */
+    padding: 20px; /* Ajusta el espaciado interno según sea necesario */
+}
+
+.caja-enlace {
+    display: inline-block; /* Para que ocupe solo el ancho necesario */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    background-color: rgba(80, 40, 10, 0.0); /* Color de fondo de la caja */
+    color: white; /* Color del texto dentro de la caja */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    border-radius: 0px; /* Bordes redondeados para la caja */
+    border: 2px solid white; /* Color del borde de la caja */
+}
+
+.caja-buttons {
+    font-size: 20px;
+    display: inline-block; /* Para que ocupe solo el ancho necesario */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    background-color: rgba(80, 40, 10, 0.0); /* Color de fondo de la caja */
+    color: white; /* Color del texto dentro de la caja */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    border-radius: 0px; /* Bordes redondeados para la caja */
+    border: 2px solid white; /* Color del borde de la caja */
+}
+.caja-buttons1 {
+    font-size: 15px;
+    display: inline-block; /* Para que ocupe solo el ancho necesario */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo de la caja */
+    color: white; /* Color del texto dentro de la caja */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    border-radius: 0px; /* Bordes redondeados para la caja */
+    border: black; /* Color del borde de la caja */
+}
+.boton-confirmar-Asistencia {
+    font-size: 20px;
+    display: inline-block; /* Para que ocupe solo el ancho necesario */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    background-color: rgba(80, 40, 10, 0.0); /* Color de fondo de la caja */
+    color: white; /* Color del texto dentro de la caja */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    border-radius: 0px; /* Bordes redondeados para la caja */
+    border: 2px solid white; /* Color del borde de la caja */
+}
+
+#calendarButtons {
+      display: none;
+      margin-top: 20px;
+    }
+
+    svg {
+            width: 40px; /* Cambia el ancho del SVG */
+            height: 40px; /* Cambia la altura del SVG */
+            fill: white; /* Cambia el color de relleno del SVG */
+        }
+
+#miCajaEmergente {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    /* Estilos para oscurecer el fondo cuando la caja emergente está activa */
+    #fondoModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    /* Estilos para el botón que muestra la caja emergente */
+    #mostrarBtn {
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+.columnas {
+    display: flex; /* Utilizamos flexbox para distribuir los elementos */
+    justify-content: center;
+    text-align: center;
+
+ }
+  .columna {
+    flex: 1; /* Las columnas ocuparán el mismo espacio */
+    padding: 10px; /* Añadimos un poco de espacio entre el borde y el contenido */ 
+    font-weight: normal;
+    justify-content: center;
+  }
+
+.divider {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    height: 130px;
+    background-image: url('divider.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .div-transparent {
+    /* Aquí puedes agregar estilos específicos para la clase .div-transparent si es necesario */
+  }
